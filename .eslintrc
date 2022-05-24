@@ -7,7 +7,9 @@
     },
     "rules": {
         "linebreak-style": "off",
-        "avoidEscape": true
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "eol-last": 0,
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
     },
     "extends": ["eslint:recommended", "google"]
 }
