@@ -9,7 +9,20 @@
         "linebreak-style": "off",
         "quotes": [2, "single", { "avoidEscape": true }],
         "eol-last": 0,
-        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": false,
+                "MethodDefinition": false,
+                "ClassDeclaration": false,
+                "ArrowFunctionExpression": false,
+                "FunctionExpression": false
+            }
+        }],
+        "object-curly-spacing": ["error", "always"],
+        "indent": ["error", "tab"],
+        "no-tabs": 0
+        
     },
     "extends": ["eslint:recommended", "google"]
 }
