@@ -21,7 +21,8 @@
         }],
         "object-curly-spacing": ["error", "always"],
         "indent": ["error", "tab"],
-        "no-tabs": 0
+        "no-tabs": 0,
+        "max-len": ["error", { "code": 120 }]
         
     },
     "extends": ["eslint:recommended", "google"]

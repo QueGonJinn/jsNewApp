@@ -17,28 +17,29 @@ const jsLoaders = () => {
 		{
 			loader: 'babel-loader',
 			options: {
-				presets: ['@babel/preset-env']
-			}
-		}
+				presets: ['@babel/preset-env'],
+				plugins: ["@babel/plugin-proposal-class-properties"],
+			},
+		},
 	]
 	if (isDev) {
-		loaders.push('eslint-loader')
+		loaders.push('eslint-loader');
 	}
 
 	return loaders;
 }
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    mode: 'development',
-    entry: ['@babel/polyfill', './index.js'],
-    output: {
-        filename: fileName('js'),
-        path: path.resolve(__dirname, 'dist')
-    },
-    resolve: {
-        extensions: ['.js'],
-        alias: {
+	context: path.resolve(__dirname, 'src'),
+	mode: 'development',
+	entry: ['@babel/polyfill', './index.js'],
+	output: {
+		filename: fileName('js'),
+		path: path.resolve(__dirname, 'dist'),
+		},
+	resolve: {
+		extensions: ['.js'],
+		alias: {
             '@': path.resolve(__dirname, 'src'),
             '@core': path.resolve(__dirname, 'src/core'),
         }
